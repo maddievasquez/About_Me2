@@ -3,4 +3,7 @@
     <string name="imageprofile">ImageProfile</string>
     <string name="educationButton">Education</string>
     <string name="skillsButton">Skills</string>
+    <string name="hobbiesButton">Hobbies</string>
+    <string name="achievementsButton">Achievements</string>
+    <string name="about_me">About Me</string>
 </resources>
