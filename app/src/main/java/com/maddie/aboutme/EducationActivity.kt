@@ -1,5 +1,4 @@
 package com.maddie.aboutme
-
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -8,9 +7,17 @@ import androidx.appcompat.widget.Toolbar
 
 class EducationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        val toolbar: Toolbar = findViewById<Toolbar>(R.id.toolbar_main) as Toolbar
+        val toolbar: Toolbar = findViewById<Toolbar>(R.id.toolbar_main)
 //        val toolbarTextView = findViewById<View>(android.R.id.toolbarTextView) as TextView
-        setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar)
+        //actionbar
+        val actionbar = supportActionBar
+        //set actionbar title
+        actionbar!!.title = "New Activity"
+        //set back button
+        actionbar.setDisplayHomeAsUpEnabled(true)
+        actionbar.setDisplayHomeAsUpEnabled(true)
+        super.onBackPressed();
 
 
         super.onCreate(savedInstanceState)
@@ -20,7 +27,10 @@ class EducationActivity : AppCompatActivity() {
             val Intent = Intent(this, EducationActivity::class.java)
             startActivity(Intent)
         }
-
+        fun onSupportNavigateUp(): Boolean {
+            onBackPressed()
+            return true
+        }
     }
 
     }
