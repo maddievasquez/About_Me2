@@ -8,13 +8,23 @@
     tools:context=".MainActivity"
     android:fitsSystemWindows="true"
     tools:ignore="ExtraText">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
     <!--I used a card view in order to make the picture round because in android studio image view there is not a feature for this-->
     <include
         layout="@layout/toolbar_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/toolbar_main">
+        android:id="@+id/toolbar_main"
+        android:text="Hello world"
+        tools:ignore="HardcodedText">
 
     <TextView
         android:text="@string/about_me"
@@ -27,7 +37,7 @@
         android:visibility="visible"
         />
     </include>
-
+//I used card in order to make the picture round
 
     <androidx.cardview.widget.CardView
         android:layout_width="200dp"
@@ -36,15 +46,20 @@
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
         >
-
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/imageprofile"
             android:scaleType="fitXY"
             android:src="@drawable/profile_image" />
-
     </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="156dp"
+            android:text="@string/profile_info" />
+    </LinearLayout>.
+    </ScrollView>
 
 //Using linear layout I was able to keep the buttons in the bottom of the screen, so a linear layout inside another one
 
