@@ -1,9 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SkillsActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="#FFE9D6">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#175676">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:drawableStartCompat="@drawable/ic_skills"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="end"
+                android:paddingTop="20dp"
+                android:text="@string/skillsButton"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="560dp"
+        android:orientation="vertical"
+        android:background="#FFE9D6"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:contentDescription="@string/skillsScreen"
+                android:scaleType="fitStart"
+                android:src="@drawable/tesol" />
+
+        </ScrollView>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/educationBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:drawableTop="@drawable/ic_graduationcap"
+            android:fontFamily="@font/poppins_medium"
+            android:minHeight="48dp"
+            android:paddingTop="5dp"
+            android:text="@string/educationButton"
+            android:textAllCaps="false"
+            android:textColor="#F5F1ED"
+            android:textSize="10sp"
+            tools:ignore="SmallSp"
+            android:layout_width="wrap_content" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/homeBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_button"
+            android:drawableTop="@drawable/ic_home"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            app:backgroundTint="#175676"
+            app:iconPadding="0dp"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:layout_width="wrap_content" />
+
+        <Button
+            android:id="@+id/hobbiesBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:drawableTop="@drawable/ic_hobbies"
+            android:fontFamily="@font/poppins_medium"
+            android:minHeight="48dp"
+            android:paddingTop="5dp"
+            android:text="@string/hobbiesButton"
+            android:textAllCaps="false"
+            android:textColor="#F5F1ED"
+            android:textSize="10sp"
+            tools:ignore="SmallSp"
+            android:layout_width="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

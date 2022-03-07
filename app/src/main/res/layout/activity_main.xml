@@ -1,72 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) $Madelin Vasquez.March.2022. Built with Android Studio
+  -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".MainActivity"
-    android:fitsSystemWindows="true"
-    tools:ignore="ExtraText">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:scrollbars="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    tools:ignore="ExtraText"
+    android:background="#FFE9D6">
 
-    <!--I used a card view in order to make the picture round because in android studio image view there is not a feature for this-->
-    <include
-        layout="@layout/toolbar_main"
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolbar_main"
-        android:text="Hello world"
-        tools:ignore="HardcodedText">
+        android:layout_height="60dp"
+        android:background="#175676">
+        ///I wrap the textview inside a relative layout which is inside of the tool bar. This help
+        me center the text
 
-    <TextView
-        android:text="@string/about_me"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/about_me"
-        android:textSize="18sp"
-        android:fontFamily="sans-serif-condensed"
-        android:gravity="center"
-        android:visibility="visible"
-        />
-    </include>
-//I used card in order to make the picture round
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        app:cardCornerRadius="100dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="25dp"
-        >
-        <ImageView
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:contentDescription="@string/imageprofile"
-            android:scaleType="fitXY"
-            android:src="@drawable/profile_image" />
-    </androidx.cardview.widget.CardView>
+            android:gravity="center">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="156dp"
-            android:text="@string/profile_info" />
-    </LinearLayout>.
-    </ScrollView>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:text="@string/about_me"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
 
-//Using linear layout I was able to keep the buttons in the bottom of the screen, so a linear layout inside another one
+
+    //Scrollview starts here
+
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--I used a card view in order to make the picture round because in android studio image view there is not a feature for this-->
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"
+                app:cardCornerRadius="100dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/imageprofile"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/profile_image"
+
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="center_horizontal"
+                android:text="@string/name"
+                android:textColor="#0D3244"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingTop="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:fontFamily="@font/poppins_light_italic"
+                android:gravity="center_horizontal"
+                android:text="@string/email"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/introduction"
+                android:gravity="bottom"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Copyright"
+                android:layout_gravity="bottom"
+                android:textColor="#A9A9A9"/>
+        </LinearLayout>
+
+
+
+</ScrollView>
+    //Using linear layout I was able to keep the buttons in the bottom of the screen, so a linear
+    layout inside another one
+
 
     <LinearLayout
-        android:id="@+id/buttons"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
         android:gravity="bottom"
         android:orientation="horizontal">
 
@@ -74,72 +122,75 @@
             android:id="@+id/educationBtn"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_height="wrap_content"
-            android:minHeight="48dp"
+            android:layout_marginEnd="5dp"
             android:layout_weight="1"
             android:background="@drawable/custom_button"
-            android:drawableStart="@drawable/ic_graduationcap"
+            android:drawableTop="@drawable/ic_graduationcap"
+            android:fontFamily="@font/poppins_medium"
+            android:minHeight="48dp"
+            android:paddingTop="5dp"
             android:text="@string/educationButton"
             android:textAllCaps="false"
             android:textColor="#F5F1ED"
-            android:textSize="11sp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
+            android:textSize="10sp"
 
-           />
+            tools:ignore="SmallSp"
+            android:layout_width="wrap_content" />
+
         <Button
             android:id="@+id/skillsBtn"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:layout_weight="1"
-            android:layout_marginStart="5dp"
             android:layout_marginEnd="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
+            android:layout_weight="1"
             android:background="@drawable/custom_button"
-            android:drawableStart="@drawable/ic_skills"
+            android:drawableTop="@drawable/ic_skills"
+            android:fontFamily="@font/poppins_medium"
+            android:minHeight="48dp"
+            android:paddingTop="5dp"
             android:text="@string/skillsButton"
             android:textAllCaps="false"
             android:textColor="#F5F1ED"
-            android:textSize="11sp"
-            />
-<Button
-    android:id="@+id/hobbiesBtn"
-    style="?android:attr/buttonBarButtonStyle"
-    android:layout_weight="1"
-    android:layout_height="wrap_content"
-    android:minHeight="48dp"
-    android:paddingEnd="5dp"
-    android:paddingStart="5dp"
-    android:layout_marginStart="5dp"
-    android:layout_marginEnd="5dp"
-    android:background="@drawable/custom_button"
-    android:drawableStart="@drawable/ic_hobbies"
-    android:text="@string/hobbiesButton"
-    android:textAllCaps="false"
-    android:textColor="#F5F1ED"
-    android:textSize="11sp"
-    />
+            android:textSize="10sp"
+            tools:ignore="SmallSp"
+            android:layout_width="wrap_content" />
+
+        <Button
+            android:id="@+id/hobbiesBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/custom_button"
+            android:drawableTop="@drawable/ic_hobbies"
+            android:fontFamily="@font/poppins_medium"
+            android:minHeight="48dp"
+            android:paddingTop="5dp"
+            android:text="@string/hobbiesButton"
+            android:textAllCaps="false"
+            android:textColor="#F5F1ED"
+            android:textSize="10sp"
+            tools:ignore="SmallSp"
+            android:layout_width="wrap_content" />
 
         <Button
             android:id="@+id/achievementsBtn"
             style="?android:attr/buttonBarButtonStyle"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:paddingEnd="1dp"
-            android:paddingStart="1dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
             android:background="@drawable/custom_button"
-            android:drawableStart="@drawable/ic_achievement"
+            android:drawableTop="@drawable/ic_achievement"
+            android:fontFamily="@font/poppins_medium"
+            android:minHeight="48dp"
+            android:paddingTop="5dp"
             android:text="@string/achievementsButton"
             android:textAllCaps="false"
             android:textColor="#F5F1ED"
-            android:textSize="11sp"
-            />
+            android:textSize="10sp"
+            tools:ignore="SmallSp"
+            android:layout_width="wrap_content" />
     </LinearLayout>
+
+
 
 </LinearLayout>

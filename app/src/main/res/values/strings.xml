@@ -6,5 +6,16 @@
     <string name="hobbiesButton">Hobbies</string>
     <string name="achievementsButton">Achievements</string>
     <string name="about_me">About Me</string>
-    <string name="profile_info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survive</string>
+    <string name="name">Maddie Vasquez</string>
+    <string name="email">22773@student.dorset-college.ie</string>
+    <string name="introduction">Born in El Salvador Central America. Moved to the US at 18 years old, and lived there for 6 years. Now pursuing a career in Computer Science in Dorset College, Ireland.</string>
+    <string name="achievements">Achievemnets</string>
+    <string name="educationScreen">Education Screen</string>
+    <string name="homescreen_button">HomeScreen_Button</string>
+    <string name="education">Education Screen</string>
+    <string name="skillsScreen">Skills Screen</string>
+    <string name="hobbies_screen">Hobbies Screen</string>
+    <string name="Crochet_Hobby">When I am not in school or in front of a computer I enjoy doing chochet, even if I don\'t finish the piece</string>
+    <string name="home_button">Home Button</string>
+    <string name="Copyright">Copyright (c) $Madelin Vasquez.March.2022. Built with Android Studio</string>
 </resources>

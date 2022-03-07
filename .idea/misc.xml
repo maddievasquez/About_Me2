@@ -5,12 +5,18 @@
       <map>
         <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/drawable/circle_shape.xml" value="0.1855" />
         <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/drawable/custom_button.xml" value="0.2595" />
+        <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/drawable/home_button.xml" value="0.334" />
         <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/drawable/ic_achievement.xml" value="0.196" />
+        <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/drawable/ic_home.xml" value="0.261" />
         <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.196" />
         <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/drawable/image.xml" value="0.1855" />
-        <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/layout/activity_education.xml" value="0.33" />
-        <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/layout/activity_hobbies.xml" value="0.2557291666666667" />
+        <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/font/fredoka.xml" value="0.34270833333333334" />
+        <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/layout/activity_achievements.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/layout/activity_education.xml" value="0.19489247311827956" />
+        <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/layout/activity_hobbies.xml" value="0.22" />
         <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/layout/activity_skills.xml" value="0.33" />
+        <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/layout/home_button.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/layout/toobar_main.xml" value="0.284375" />
         <entry key="..\:/Users/Tymek/AndroidStudioProjects/AboutMe2/app/src/main/res/layout/toolbar_main.xml" value="0.18802083333333333" />
       </map>

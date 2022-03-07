@@ -1,97 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#FFE9D6">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="#175676">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="end"
-            android:paddingTop="20dp"
-            android:text="@string/educationButton"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-            app:drawableStart="@drawable/ic_graduationcap" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:drawableStartCompat="@drawable/ic_graduationcap"
+                android:drawablePadding="15dp"
+                android:fontFamily="@font/poppins_medium"
+                android:gravity="end"
+                android:paddingTop="20dp"
+                android:text="@string/educationButton"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
+
+        </RelativeLayout>
     </androidx.appcompat.widget.Toolbar>
 
-    <ImageView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_gravity="top"
-        android:scaleType="fitStart"
-        android:src="@drawable/college" />
+        android:layout_height="548dp"
+        android:background="#FFE9D6"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:contentDescription="@string/education"
+                android:scaleType="fitStart"
+                android:src="@drawable/college" />
+
+        </ScrollView>
+    </LinearLayout>
+
+
 
     <LinearLayout
-        android:id="@+id/buttons"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="bottom"
         android:orientation="horizontal">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/homeBtn"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/home_button"
+            android:contentDescription="@string/home_button"
+            android:drawableTop="@drawable/ic_home"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            app:backgroundTint="#175676"
+            app:iconPadding="0dp"
+            tools:ignore="TouchTargetSizeCheck"
+            android:layout_width="wrap_content" />
 
         <Button
             android:id="@+id/skillsBtn"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_height="wrap_content"
-            android:minHeight="48dp"
             android:layout_weight="1"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
             android:background="@drawable/custom_button"
-            android:drawableStart="@drawable/ic_skills"
+            android:drawableTop="@drawable/ic_skills"
+            android:fontFamily="@font/poppins_medium"
+            android:minHeight="48dp"
+            android:paddingTop="5dp"
             android:text="@string/skillsButton"
             android:textAllCaps="false"
             android:textColor="#F5F1ED"
-            android:textSize="11sp"
-            />
-        <Button
-            android:id="@+id/hobbiesBtn"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:paddingEnd="5dp"
-            android:paddingStart="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:background="@drawable/custom_button"
-            android:drawableStart="@drawable/ic_hobbies"
-            android:text="@string/hobbiesButton"
-            android:textAllCaps="false"
-            android:textColor="#F5F1ED"
-            android:textSize="11sp"
-            />
+            android:textSize="10sp"
+            tools:ignore="SmallSp,TouchTargetSizeCheck"
+            android:layout_width="wrap_content" />
 
-        <Button
-            android:id="@+id/achievementsBtn"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:paddingEnd="1dp"
-            android:paddingStart="1dp"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp"
-            android:background="@drawable/custom_button"
-            android:drawableStart="@drawable/ic_achievement"
-            android:text="@string/achievementsButton"
-            android:textAllCaps="false"
-            android:textColor="#F5F1ED"
-            android:textSize="11sp"
-            />
     </LinearLayout>
 
 </LinearLayout>

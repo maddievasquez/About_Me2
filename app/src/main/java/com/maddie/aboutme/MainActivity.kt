@@ -16,15 +16,18 @@ import android.os.Bundle as Bundle1
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle1?) {
-        
+
 
         // Note that the Toolbar defined in the layout has the id "my_toolbar"
-        val toolbar: Toolbar = findViewById<Toolbar>(R.id.toolbar_main) as Toolbar
+//        val toolbar: Toolbar = findViewById<Toolbar>(R.id.toolbar_main) as Toolbar
 //        val toolbarTextView = findViewById<View>(android.R.id.toolbarTextView) as TextView
-        setSupportActionBar(toolbar);
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+//        setSupportActionBar(toolbar);
+//        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+//on click when the buttons are pressed to take you to the next activity
         val educationBtn = findViewById<Button>(R.id.educationBtn)
         educationBtn.setOnClickListener {
             val Intent = Intent(this, EducationActivity::class.java)
@@ -37,7 +40,10 @@ class MainActivity : AppCompatActivity() {
         }
         val hobbiesBtn = findViewById<Button>(R.id.hobbiesBtn)
         hobbiesBtn.setOnClickListener {
-            val Intent = Intent(this, HobbiesActivity::class.java)
+            val Intent = Intent(
+                this,
+                Hobbies_Activity::class.java
+            )
             startActivity(Intent)
         }
         val achievementsBtn = findViewById<Button>(R.id.achievementsBtn)
@@ -45,9 +51,6 @@ class MainActivity : AppCompatActivity() {
             val Intent = Intent(this, AchievementsActivity::class.java)
             startActivity(Intent)
         }
-
     }
-}
-
 
 }
